@@ -1,42 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FirstMaui.MainPage">
+             x:Class="FirstMaui.MainPage"
+             Shell.NavBarIsVisible="False">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <Grid Background="AliceBlue">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        <Image Source="mountains.jpg" Aspect="Fill" />
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+        <VerticalStackLayout Grid.Column="1" Margin="15, 5, 0, 0">
+            <Label Text="Explore."
+                   TextColor="{StaticResource White}"
+                   FontSize="60" />
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+            <Label Text="Travel."
+                   TextColor="{StaticResource White}"
+                   FontSize="60"/>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+            <Label Text="Inspire."
+                   TextColor="{StaticResource Black}"
+                   FontSize="60"
+                   />
+
+            <Label Text="Life is all about the journey."
+                   Margin="0,30,0,0"
+                   TextColor="{StaticResource White}"/>
+
+            <Label Text="Find yours."
+                   TextColor="{StaticResource White}"/>
 
         </VerticalStackLayout>
-    </ScrollView>
+
+        <Button BackgroundColor="{StaticResource Black}"
+                Grid.Row="2"
+                Text="Get Started"
+                CornerRadius="0"/>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        
+        
+
+        
+        
+    </Grid>
+    
 
 </ContentPage>
-
